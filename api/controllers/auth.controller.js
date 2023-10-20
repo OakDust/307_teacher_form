@@ -37,6 +37,7 @@ exports.professorAuth = async (req, res, next) => {
 }
 
 exports.studentAuth = async (req, res, next) => {
+    console.log(req.body)
     const student = await Student.findOne({
         where: {
             s_email: req.body.email
@@ -44,18 +45,19 @@ exports.studentAuth = async (req, res, next) => {
     })
 
     if (!student) {
-        res.status(400).send('register first')
+        await res.status(400).json({message: "not registered"})
         return
     } 
 
     const validPasswordStudent = bcrypt.compareSync(req.body.password, student.s_password); 
 
     if (!validPasswordStudent) {
-        res.status(400).send('password not valid')
+        // res.set({okay: "password is wrond"})
+        await res.json({message: "password is wrong"})
         return
-    }
+    } 
 
-    const token = generateAccessToken(student.s_id)
+    const token = await generateAccessToken(student.s_id)
 
-    res.send(token)    
+    await res.json({message: token})
 }

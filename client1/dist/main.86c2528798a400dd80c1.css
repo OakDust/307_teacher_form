@@ -1,0 +1,89 @@
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/authorization/auth-styles.module.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.CHhhcrQ5yWGC2KsiZOay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.g3pJqtWKn_Wb0qsJN50s {
+  padding-top: 115px;
+  text-align: center;
+  color: white;
+}
+.g3pJqtWKn_Wb0qsJN50s h1 {
+  font-family: "Tektur";
+  font-weight: 800;
+  font-size: 82px;
+  line-height: 82px;
+  margin-bottom: 16px;
+}
+.g3pJqtWKn_Wb0qsJN50s p {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+}
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/UI/authForm/auth-form.module.scss ***!
+  \*************************************************************************************************************************************************************************************/
+.lY1l_bYx8vBPul7wntSg {
+  background-color: white;
+  border-radius: 26px;
+  box-sizing: border-box;
+  padding: 35px 37px 67px 37px;
+  width: 470px;
+}
+
+.tl6oJyEnVaxlfHxQ6l89 {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+.tl6oJyEnVaxlfHxQ6l89 div {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+.tl6oJyEnVaxlfHxQ6l89 div label {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+}
+.tl6oJyEnVaxlfHxQ6l89 div input {
+  font-family: "Montserrat";
+  font-size: 18px;
+  border-radius: 16px;
+  background-color: #D9D9D9;
+  border: none;
+  height: 57px;
+  outline: none;
+  box-sizing: border-box;
+  padding: 18px;
+}
+/*!*************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/general-styles.module.css ***!
+  \*************************************************************************************************************************************************************************/
+body {
+  background-color: #3a3aac;
+  background-image: url(/assets/cf0fa4b75a7ebf901d9a.webp);
+  background-size: 100% auto;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/assets/7e687123cd4528224ce5.ttf);
+}
+@font-face {
+  font-family: "Tektur";
+  src: url(/assets/d120d1180b75dca72626.ttf);
+}
+
+/*# sourceMappingURL=main.86c2528798a400dd80c1.css.map*/

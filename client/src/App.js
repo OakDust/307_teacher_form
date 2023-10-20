@@ -2,30 +2,41 @@ import { useEffect, useState } from 'react';
 function App() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  let [userData, setUserData] = useState(null)
 
-  useEffect(() => {
-    fetch("http://localhost:5000/")
+
+  const backendService = (data) => {
+    fetch("http://localhost:5000/student")
     .then(res => res.json())
     .then(
         (result) => {
             setIsLoaded(true);
-            // setUserData(result);
+            setUserData(result);
         },
 
         (error) => {
-            setIsLoaded(true);
+            setIsLoaded(false);
             setError(error);
         }
     )
+    data = JSON.stringify(data, null, 2)
+
+    return data
+  }
+
+  useEffect((data) => {
+    backendService(data)
 }, [])
+
+  userData = JSON.stringify(userData, null, 2)
 
   if (error) {
     return <div>Ошибка: {error.message}</div>;
-  } else if (!isLoaded) {
+  } else if (isLoaded) {
     return (
       <div className="App">
         <p>its okay</p>
-            <form method='post' action='http://localhost:5000/'>
+            <form method='post' action='http://localhost:5000/student'>
               <label for="name">name:</label><br/>
               <input type="text" id="name" name="name" /><br/>
               
@@ -48,7 +59,10 @@ function App() {
 
               <button type='submit'>submit</button>
             </form>
-        
+
+          <div>
+            {userData}
+          </div>
 
       </div>
     )
